@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply antialiased bg-brand-background;
+  }
+}
+.primary-link {
+  @apply no-underline border-b border-b-transparent transition-colors duration-500 hover:border-b-brand-primary
+}
+
+/* Special case to style env.DATABASE_URL in code snippet */
+span.constant {
+  @apply !text-brand-tertiary
+}
+
+span.react-syntax-highlighter-line-number {
+  @apply text-white/70
+}

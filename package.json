@@ -1,0 +1,44 @@
+{
+  "name": "ping-thing",
+  "version": "1.0.0",
+  "description": "Neon Demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulieScanlon/ping-thing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulieScanlon/ping-thing/issues"
+  },
+  "homepage": "https://github.com/PaulieScanlon/ping-thing#readme",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.5.6",
+    "@vercel/edge": "^1.0.1",
+    "doc999tor-fast-geoip": "^1.1.146",
+    "geolib": "^3.3.4",
+    "next": "^13.4.12",
+    "react": "^18.2.0",
+    "react-code-blocks": "0.0.9-0",
+    "react-dom": "^18.2.0",
+    "react-globe.gl": "^2.24.3",
+    "react-query": "^3.39.3",
+    "request-ip": "^3.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "prop-types": "^15.8.1",
+    "tailwindcss": "^3.3.3"
+  }
+}
