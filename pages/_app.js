@@ -71,7 +71,7 @@ const App = ({ Component, pageProps }) => {
               />
             </a>
             <a
-              href='https://github.com/PaulieScanlon/ping-thing'
+              href='https://github.com/neondatabase/ping-thing'
               target='_blank'
               rel='noopener'
               className='flex gap-2 text-white font-bold self-start border-2 border-white items-center p-1 xl:p-1.5 -mt-1 rounded-full no-underline transition-colors duration-300 hover:border-brand-primary'
