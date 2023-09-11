@@ -301,7 +301,7 @@ const Page = memo(() => {
             </div>
             <div className='flex shrink items-end'>
               <Image
-                src='/static/cta-elephant.avif'
+                src={`${process.env.NEXT_PUBLIC_REWRITE_PREFIX}/static/cta-elephant.avif`}
                 width={1684}
                 height={964}
                 alt='Neon Elephant'
