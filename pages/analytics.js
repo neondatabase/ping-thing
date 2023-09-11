@@ -11,9 +11,12 @@ const Page = () => {
     queryKey: ['read-query'],
     queryFn: async () => {
       try {
-        const response = await fetch('/api/read', {
-          method: 'GET',
-        });
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_REWRITE_PREFIX}/api/read`,
+          {
+            method: 'GET',
+          }
+        );
 
         if (!response.ok) {
           throw new Error('!response.ok');

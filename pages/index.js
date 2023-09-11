@@ -53,10 +53,13 @@ const Page = memo(() => {
 
       const start_time = performance.now();
 
-      const response = await fetch('/api/create-edge', {
-        method: 'POST',
-        body: JSON.stringify({ date: date }),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_REWRITE_PREFIX}/api/create-edge`,
+        {
+          method: 'POST',
+          body: JSON.stringify({ date: date }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error('!response.ok');
@@ -129,10 +132,13 @@ const Page = memo(() => {
     onSuccess: async (data) => {
       const { id, start_time, end_time, miles, kilometers } = data;
 
-      await fetch('/api/update-entry', {
-        method: 'POST',
-        body: JSON.stringify({ id, start_time, end_time, miles, kilometers }),
-      });
+      await fetch(
+        `${process.env.NEXT_PUBLIC_REWRITE_PREFIX}/api/update-entry`,
+        {
+          method: 'POST',
+          body: JSON.stringify({ id, start_time, end_time, miles, kilometers }),
+        }
+      );
     },
     onError: async () => {
       throw new Error('Error response');
