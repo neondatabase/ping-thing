@@ -30,8 +30,7 @@
     "react-code-blocks": "0.0.9-0",
     "react-dom": "^18.2.0",
     "react-globe.gl": "^2.24.3",
-    "react-query": "^3.39.3",
-    "request-ip": "^3.3.0"
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
