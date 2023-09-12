@@ -24,7 +24,6 @@
   "dependencies": {
     "@neondatabase/serverless": "^0.5.6",
     "@vercel/edge": "^1.0.1",
-    "doc999tor-fast-geoip": "^1.1.146",
     "geolib": "^3.3.4",
     "next": "^13.4.12",
     "react": "^18.2.0",
