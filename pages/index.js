@@ -15,6 +15,7 @@ import {
 } from '../const';
 
 import { getEdgeDistance } from '../utils/get-edge-distance';
+import { sendGtagEvent } from '../utils/send-gtag-event';
 
 import JourneyCard from '../components/journey-card';
 import LoadingDots from '../components/loading-dots';
@@ -252,6 +253,7 @@ const Page = memo(() => {
               target='_blank'
               rel='noopener'
               className='inline-flex self-start items-center gap-2 primary-link'
+              onClick={() => sendGtagEvent('click_ping_thing_learn_more')}
             >
               Learn more
               <svg
@@ -293,6 +295,7 @@ const Page = memo(() => {
                     href='https://neon.tech'
                     target='_blank'
                     className='relative flex self-start items-center justify-center no-underline bg-brand-primary text-brand-background px-10 font-semibold text-lg rounded-full hover:bg-brand-primary-light transition-colors duration-200 min-w-auto sm:min-w-auto min-h-[52px] min-w-[150px] z-10'
+                    onClick={() => sendGtagEvent('click_ping_thing_signup')}
                   >
                     Sign up
                   </a>
