@@ -253,6 +253,7 @@ const Page = memo(() => {
               target='_blank'
               rel='noopener'
               className='inline-flex self-start items-center gap-2 primary-link'
+              onClick={() => sendGtagEvent('click_ping_thing_learn_more')}
             >
               Learn more
               <svg

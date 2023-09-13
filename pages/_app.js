@@ -7,6 +7,7 @@ import { IBM_Plex_Sans } from 'next/font/google';
 
 import logo from '../static/logo.svg';
 import GitHubIcon from '../components/github-icon';
+import { sendGtagEvent } from '../utils/send-gtag-event';
 
 import '../styles/globals.css';
 
@@ -62,6 +63,7 @@ const App = ({ Component, pageProps }) => {
               target='_blank'
               rel='noopener'
               className='self-start'
+              onClick={() => sendGtagEvent('click_ping_thing_neon_logo')}
             >
               <Image
                 priority
@@ -74,7 +76,9 @@ const App = ({ Component, pageProps }) => {
               href='https://github.com/neondatabase/ping-thing'
               target='_blank'
               rel='noopener'
-              className='flex gap-2 text-white font-bold self-start border-2 border-white items-center p-1 xl:p-1.5 -mt-1 rounded-full no-underline transition-colors duration-300 hover:border-brand-primary'
+              className='flex gap-2 text-white font-bold self-start border-2 border-white items-center p-1 xl:p-1.5 -mt-1 rounded-full 
+              no-underline transition-colors duration-300 hover:border-brand-primary'
+              onClick={() => sendGtagEvent('click_ping_thing_repository')}
             >
               <GitHubIcon className='w-7 h-7 xl:h-8 xl:w-8' />
               <span className='hidden xl:block pr-4 pb-1'>ping-thing</span>
