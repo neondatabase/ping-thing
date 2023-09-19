@@ -42,7 +42,7 @@ const Page = () => {
           <div className='relative'>
             <div className='py-8'>
               <h1 className=''>All Pings</h1>
-              <p className=''>{`${query.data.response.length} Pings since September xx, 2023.`}</p>
+              <p className=''>{`${query.data.response.length} Pings since September 19, 2023.`}</p>
             </div>
             <div className='relative border border-brand-border rounded-lg overflow-auto'>
               <div className='bg-brand-background h-[65vh] overflow-auto text-sm'>
