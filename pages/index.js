@@ -212,34 +212,69 @@ const Page = memo(() => {
       </div>
 
       <div className='relative flex flex-col gap-24 xl:gap-48 px-8 xl:px-0 mx-auto max-w-6xl'>
-        <section className='flex flex-col gap-8 p-6 xl:p-10 bg-brand-dark-gray rounded-lg'>
-          <div className='flex flex-col gap-2'>
-            <h2 className='text-4xl sm:text-5xl'>Postgres at the Edge</h2>
-            <div className='flex flex-col xl:flex-row gap-8 xl:gap-24'>
-              <p className='text-base sm:text-xl'>
-                Edge Functions run closer to the user. This minimizes both the
-                number, and length of network round-trips to and from the
-                database, resulting in lower latency response times.
-              </p>
-              <div>
-                <button
-                  onClick={mutation.mutate}
-                  className='flex items-center justify-center bg-transparent text-white font-semibold text-lg rounded-full border border-white enabled:hover:bg-brand-background disabled:cursor-not-allowed disabled:bg-brand-transparent disabled:text-zinc-700 disabled:border-brand-border transition-colors duration-200 min-h-[52px] min-w-[150px]'
-                  disabled={mutation.isLoading || details.user.city}
-                >
-                  {mutation.isLoading ? (
-                    <LoadingDots className='bg-white' />
-                  ) : (
-                    'Ping'
-                  )}
-                </button>
+        <section className='flex flex-col gap-8'>
+          <div className='flex flex-col gap-8 p-6 xl:p-10 bg-brand-dark-gray rounded-lg'>
+            <div className='flex flex-col gap-2'>
+              <h2 className='text-4xl sm:text-5xl'>Postgres at the Edge</h2>
+              <div className='flex flex-col xl:flex-row gap-8 xl:gap-24'>
+                <p className='text-base sm:text-xl'>
+                  Edge Functions run closer to the user. This minimizes both the
+                  number, and length of network round-trips to and from the
+                  database, resulting in lower latency response times.
+                </p>
+                <div>
+                  <button
+                    onClick={mutation.mutate}
+                    className='flex items-center justify-center bg-transparent text-white font-semibold text-lg rounded-full border border-white enabled:hover:bg-brand-background disabled:cursor-not-allowed disabled:bg-brand-transparent disabled:text-zinc-700 disabled:border-brand-border transition-colors duration-200 min-h-[52px] min-w-[150px]'
+                    disabled={mutation.isLoading || details.user.city}
+                  >
+                    {mutation.isLoading ? (
+                      <LoadingDots className='bg-white' />
+                    ) : (
+                      'Ping'
+                    )}
+                  </button>
+                </div>
               </div>
+              <hr className='border-brand-border my-6' />
             </div>
-            <hr className='border-brand-border my-6' />
-          </div>
 
-          <JourneyCard journey={details.user} />
+            <JourneyCard journey={details.user} />
+          </div>
+          <div className='flex flex-col gap-2 p-6 bg-brand-dark-gray rounded-lg'>
+            <h2 className='text-center text-2xl sm:text-3xl '>
+              How to use Postgres at the Edge
+            </h2>
+            <p className='text-center'>
+              A closer look at how to use Neon's serverless driver with Vercel
+              Edge Functions.
+            </p>
+            <a
+              href='https://neon.tech/blog/how-to-use-postgres-at-the-edge'
+              target='_blank'
+              rel='noopener'
+              className='inline-flex items-center self-center gap-2 primary-link'
+              onClick={() => sendGtagEvent('click_ping_thing_blog_link')}
+            >
+              Read post
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth={1.5}
+                stroke='currentColor'
+                className='mt-1 w-6 h-6'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'
+                />
+              </svg>
+            </a>
+          </div>
         </section>
+
         <section className='flex flex-col xl:flex-row gap-16'>
           <div className='xl:order-2 shrink flex flex-col justify-center gap-4 w-full xl:w-3/5'>
             <h2 className='text-4xl sm:text-5xl'>Neon serverless driver</h2>
