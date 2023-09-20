@@ -9,16 +9,6 @@ const Document = () => {
     <Html lang='en'>
       <Head>
         {isProd ? (
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM}`}
-            strategy='afterInteractive'
-          />
-        ) : null}
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
-        {isProd ? (
           <Script id='google-analytics' strategy='afterInteractive'>
             {`
               (function (w, d, s, l, i) {
@@ -33,6 +23,16 @@ const Document = () => {
               })(window, document, 'script', 'dataLayer', '${process.env.NEXT_PUBLIC_GTM}')
             `}
           </Script>
+        ) : null}
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+        {isProd ? (
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM}`}
+            strategy='afterInteractive'
+          />
         ) : null}
       </body>
     </Html>
