@@ -32,7 +32,7 @@ const Page = () => {
   });
 
   return (
-    <div className='relative py-16 px-8 xl:px-0 mx-auto max-w-6xl h-full min-h-[calc(100vh - 10px)]'>
+    <div className='relative py-16 px-4 smpx-8 xl:px-0 mx-auto max-w-6xl h-full min-h-[calc(100vh - 10px)]'>
       <section className='flex flex-col gap-32 px-4'>
         {query.isLoading ? (
           <div className='flex items-center justify-center'>
