@@ -356,10 +356,10 @@
     pg-protocol "*"
     pg-types "^2.2.0"
 
-"@vercel/edge@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@vercel/edge/-/edge-1.0.1.tgz#94fc7be3c79834b0833dad9cfa23ed47b55309fa"
-  integrity sha512-0lE1J1QsKmet3NUlNjS1+4tw7VpOsd3wxG91A5ZAAcxxDl3RQh/ThnYVV5VYT6FoSK5ZZ3jYh5YZCd0pWPK3yQ==
+"@vercel/edge@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vercel/edge/-/edge-1.1.0.tgz#1a0cf6487d45b89a26d70d91e8f34c95a06e7df3"
+  integrity sha512-84H2EavY5Kul9Ef1DnTH0XEG5vChqcXjyqoRLVPjjZjLWw47sMapzXXQH09pybcshR+8AKqULGvFqPTWuRh3Rw==
 
 accessor-fn@1:
   version "1.5.0"

@@ -1,21 +1,11 @@
 import { sql } from '../../neon';
 import { geolocation } from '@vercel/edge';
 
-// https://dev.to/jorik/country-code-to-flag-emoji-a21
-function getFlagEmoji(countryCode) {
-  return String.fromCodePoint(
-    ...countryCode
-      .toUpperCase()
-      .split('')
-      .map((char) => 127397 + char.charCodeAt(0))
-  );
-}
-
 export default async function handler(req) {
   // https://github.com/orgs/vercel/discussions/78
   const { date } = await new Response(req.body).json();
 
-  const { country, city, latitude, longitude } = geolocation(req);
+  const { country, city, latitude, longitude, flag } = geolocation(req);
 
   const lat = Number(latitude);
   const lng = Number(longitude);
@@ -26,7 +16,7 @@ export default async function handler(req) {
         message: 'A Ok!',
         status: 200,
         id: 123,
-        flag: getFlagEmoji('AU'),
+        flag: '🇦🇺',
         country: 'AU',
         city: 'Uluru',
         lat: -25.34449,
@@ -34,10 +24,8 @@ export default async function handler(req) {
       });
     } else {
       const city_sanitized = city.replace(/[^a-zA-Z ]/g, ' ');
-      const flag = getFlagEmoji(country);
 
-      const response =
-        await sql`INSERT INTO locations (date, flag, country, city, lat, lng, runtime)
+      const response = await sql`INSERT INTO locations (date, flag, country, city, lat, lng, runtime)
       VALUES (${date}, ${flag}, ${country}, ${city_sanitized}, ${lat}, ${lng}, 'Edge') RETURNING id;`;
 
       return Response.json({
