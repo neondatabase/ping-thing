@@ -8,6 +8,8 @@
 
 Ping a Neon Serverless Postgres database using a Vercel Edge Function to see the journey your request makes.
 
+🚀 Live Preview: [https://neon.tech/demos/ping-thing](https://neon.tech/demos/ping-thing)
+
 Read more about how this app was made on the Neon blog: [How to use Postgres at the Edge](https://neon.tech/blog/how-to-use-postgres-at-the-edge)
 
 ## Getting Started
