@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="http://neon.tech/ping-thing">
-    <img alt="Ping Thing" src="http://neon.tech/ping-thing/static/open-graph-image.jpg" />
+  <a href="http://neon.tech/demos/ping-thing">
+    <img alt="Ping Thing" src="http://neon.tech/demos/ping-thing/static/open-graph-image.jpg" />
   </a>
 </p>
 
