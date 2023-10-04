@@ -1,1 +1,1 @@
-{ "redirects": [ { "source": "/", "destination": "/ping-thing", "permanent": true } ]}
+{ "redirects": [{ "source": "/", "destination": "/demos/ping-thing", "permanent": true }] }
