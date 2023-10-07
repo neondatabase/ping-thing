@@ -25,8 +25,10 @@ export default async function handler(req) {
     } else {
       const city_sanitized = city.replace(/[^a-zA-Z ]/g, ' ');
 
-      const response = await sql`INSERT INTO locations (date, flag, country, city, lat, lng, runtime)
-      VALUES (${date}, ${flag}, ${country}, ${city_sanitized}, ${lat}, ${lng}, 'Edge') RETURNING id;`;
+      const response = await sql(
+        'INSERT INTO locations(date, flag, country, city, lat, lng, runtime) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING id',
+        [date, flag, country, city_sanitized, lat, lng, 'Edge']
+      );
 
       return Response.json({
         message: 'Ok',
