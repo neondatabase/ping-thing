@@ -47,7 +47,7 @@ CREATE TABLE locations (
   end_time      NUMERIC,
   miles         DECIMAL (10,2),
   kilometers    DECIMAL (10,2)
-)
+);
 ```
 
 Start development server.
