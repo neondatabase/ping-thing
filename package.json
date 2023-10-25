@@ -25,7 +25,7 @@
     "@neondatabase/serverless": "^0.5.6",
     "@vercel/edge": "^1.1.0",
     "geolib": "^3.3.4",
-    "next": "^13.4.12",
+    "next": "^13.5.0",
     "react": "^18.2.0",
     "react-code-blocks": "0.0.9-0",
     "react-dom": "^18.2.0",
